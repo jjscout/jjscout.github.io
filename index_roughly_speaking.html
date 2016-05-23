@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+	    <script src = "scripts/angular.js"></script>
+        <script src = "scripts/app.js"></script>
+	</head>
+    <body>
+	    <h1>Roughly speaking</h1>
+        <div class="container">
+            <div ng-controller="mainController">
+                <!--Hi, my name is {{name}}.<br>
+                <label>Enter the amount of Shekels: </label>
+                <input type="number" ng-model="shekel" id="shekel">
+                <br>
+                <label>dollar rate: </label>
+                <input type="number" ng-model="dollar" id="dollar">
+                <br>
+                <hr>
+                <h4>{{toDollars()}}</h4>-->
+                <button ng-click="rs = rs + 1" ng-init="rs=0">
+                Roughly Speaking
+                </button>
+                <br>
+                <h4>{{rs}}</h4>
+                <br>
+            </div>
+		</div>
+    </body>
+</html>
