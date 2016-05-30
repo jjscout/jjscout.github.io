@@ -8,24 +8,25 @@
 	    <h1>Roughly speaking</h1>
         <div class="container">
             <div ng-controller="mainController">
-                <!--Hi, my name is {{name}}.<br>
-                <label>Enter the amount of Shekels: </label>
-                <input type="number" ng-model="shekel" id="shekel">
-                <br>
-                <label>dollar rate: </label>
-                <input type="number" ng-model="dollar" id="dollar">
-                <br>
-                <hr>
-                <h4>{{toDollars()}}</h4>-->
-                <button ng-click="rs = rs + 1" ng-init="rs=0">
-                Roughly Speaking
+                <button ng-click="addRoughlySpeaking()">
+                    Roughly Speaking
+                </button>
+                <button ng-click="removeRoughlySpeaking()">
+                    Not Roughly
                 </button>
                 <button ng-click="rs = rs - 1">
                 Not Roughly
                 </button>
                 <br>
-                <h4>{{rs}}</h4>
+                <h4>{{rsCount}}</h4>
                 <br>
+                <div ng-repeat="val in log">
+                    h
+                    <br>
+                    {{val.timeTag}}
+                    <!--{{val.timeTag | date:'HH:mm:ss dd.MM.yyyy'}}-->
+                    <br>
+                </div>
             </div>
 		</div>
     </body>

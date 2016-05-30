@@ -2,20 +2,17 @@ var myApp = angular.module("myApp",[]);
 
 myApp.controller("mainController",function($scope){
 	//Controller code goes here
-	$scope.name="Boaty McBoatface";
-    $scope.shekel=1;
-    $scope.dollar=3.867;
-    //$scope.rs;
-    //expect(element(by.binding('rs')).getText()).toMatch('0');
-    //element(by.css('button')).click();
-    //expect(element(by.binding('rs')).getText()).toMatch('1');
-    $scope.toDollars=function(){
-        return $scope.shekel*$scope.dollar;
-    };
+    $scope.rsCount=0;
+    $scope.log=[];
+    $scope.addRoughlySpeaking=function(){
+        $scope.rsCount = $scope.rsCount + 1;
+        $scope.log[rsCount]={id:rsCount,timeTag:'1'};//new Date()}
+        return;
+    }
+    $scope.removeRoughlySpeaking=function(){
+		if ($scope.rsCount > 0){
+			$scope.rsCount = $scope.rsCount - 1;
+		}
+        return;
+    }
 });
-
-//it('should check ng-click', function() {
-//  expect(element(by.binding('count')).getText()).toMatch('0');
-//  element(by.css('button')).click();
-//  expect(element(by.binding('count')).getText()).toMatch('1');
-//});
