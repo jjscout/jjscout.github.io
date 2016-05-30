@@ -8,15 +8,22 @@
 	    <h1>Roughly speaking</h1>
         <div class="container">
             <div ng-controller="mainController">
-                <button ng-click="logRoughlySpeaking()">
-                Roughly Speaking
+                <button ng-click="addRoughlySpeaking()">
+                    Roughly Speaking
                 </button>
-                <button ng-click="rs = rs - 1">
-                Not Roughly
+                <button ng-click="removeRoughlySpeaking()">
+                    Not Roughly
                 </button>
                 <br>
-                <h4>{{rs}}</h4>
+                <h4>{{rsCount}}</h4>
                 <br>
+                <div ng-repeat="val in log">
+                    h
+                    <br>
+                    {{val.timeTag}}
+                    <!--{{val.timeTag | date:'HH:mm:ss dd.MM.yyyy'}}-->
+                    <br>
+                </div>
             </div>
 		</div>
     </body>
